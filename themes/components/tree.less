@@ -1,0 +1,115 @@
+@tree-prefix: ~"@{prefix}tree";
+.@{tree-prefix} {
+
+  &-body {
+    position: relative;
+  }
+
+  .@{prefix}search{
+    margin-bottom: 5px;
+  }
+  &-li {
+    &-opened {
+      >.@{tree-prefix} {
+        &-ul {
+          max-height: 10000px;
+          transition: max-height 2s ease-in-out;
+        }
+        &-show {
+          .@{tree-prefix}-show-expand {
+            .h-icon-right {
+              transform: rotate(90deg);
+            }
+          }
+        }
+      }
+    }
+  }
+  &-show {
+    padding: 3px 0;
+    position: relative;
+    &-space {
+      display: inline-block;
+      width: 10px;
+    }
+    &-expand {
+      width: 20px;
+      text-align: right;
+      color: @gray-color;
+      display: inline-block;
+      padding: 0 2px 0 0;
+      .text-hover();
+      .h-icon-right,
+      .h-icon-loading {
+        font-size: 12px;
+        line-height: @font-size;
+        vertical-align: middle;
+      }
+    }
+    
+    &-desc {
+      display: inline;
+      word-break: break-all;
+      font-size: @font-size-mini;
+      padding: 2px 5px;
+      margin-left: -4px;
+    }
+
+    &-icon{
+      margin-right: 5px;
+    }
+
+    &-disabled &-desc{
+      color: @disabled-color;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+  &-ul {
+    transition: max-height 0.2s cubic-bezier(0, 1, 0, 1);
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  &.h-tree-theme-item-selected {
+    .@{tree-prefix}-show-desc {
+      cursor: pointer;
+      border-radius: @border-radius;
+    }
+
+    &.@{tree-prefix}-single {
+      .@{tree-prefix}-show-desc{
+        &:hover {
+          background-color: @hover-background-color;
+        }
+      }
+      .@{tree-prefix}-show-selected .@{tree-prefix}-show-desc {
+        background-color: @primary-color;
+        color: @white-color;
+      }
+    }
+    &.@{tree-prefix}-multiple .@{tree-prefix}-show-desc{
+      &:hover{
+        color: @primary-color;
+      }
+    }
+  }
+  &-item-slot {
+    display: inline-block;
+  }
+}
+
+
+&.h-tree-theme-row-selected {
+
+  .@{tree-prefix}-show {
+    cursor: pointer;
+    &:hover {
+      background: @hover-background-color;
+    }
+    &.h-tree-show-selected {
+      background: @highlight-background-color;
+    }
+  }
+}

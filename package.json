@@ -1,0 +1,54 @@
+{
+  "name": "heyui-mobile",
+  "version": "0.0.1",
+  "description": "UI Toolkit for Mobile, Vue2.0",
+  "main": "./dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heyui/heyui-mobile.git"
+  },
+  "homepage": "http://www.heyui.top/mobile",
+  "keywords": [
+    "heyui",
+    "mobile",
+    "vue",
+    "ui",
+    "framework"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@vue/eslint-config-standard": "^4.0.0",
+    "art-template": "^4.13.2",
+    "babel-eslint": "^10.0.1",
+    "commander": "^2.19.0",
+    "eslint": "^5.3.0",
+    "eslint-plugin-html": "^5.0.3",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-vue": "^5.2.2",
+    "fs": "0.0.1-security",
+    "headr": "0.0.4",
+    "hey-log": "^0.0.8",
+    "hey-utils": "^1.0.0",
+    "less": "^3.9.0",
+    "less-to-json": "^1.2.0",
+    "standard-version": "^4.4.0"
+  },
+  "readmeFilename": "README.md",
+  "scripts": {
+    "build": "hey -b",
+    "pa": "sh ./scripts/publish.sh -alpha",
+    "pb": "sh ./scripts/publish.sh -beta",
+    "p": "sh ./scripts/publish.sh",
+    "gencss": "sh ./doc/themes/gencss.sh",
+    "eslintfix": "eslint --fix --ext .js,.vue src"
+  },
+  "standard-version": {
+    "scripts": {
+      "precommit": "sh ./scripts/headr.sh"
+    }
+  },
+  "browserslist": [
+    "ie >= 9"
+  ],
+  "copyright": "Copyright © 2017-present Lan"
+}

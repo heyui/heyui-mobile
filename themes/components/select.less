@@ -1,0 +1,120 @@
+@select-prefix: ~"@{prefix}select";
+@select-item-prefix: ~"@{select-prefix}-item";
+@select-check-prefix: h-icon-check;
+@select-close-prefix: h-icon-close;
+
+.plugin-input(@select-prefix);
+
+.@{select-prefix}{
+  &-show{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  & &-search-input {
+    .border-input-inside-input();
+  }
+  &-filterable-value{
+    top: 1px;
+    position: absolute;
+    line-height: @input-height - 6px;
+    left: 8px;
+    z-index: 1;
+    right: 22px;
+    .text-ellipsis;
+  }
+  &-single-search-input {
+    position: relative;
+    z-index: 2;
+    background-color: transparent !important;
+    &:focus+.@{select-prefix}-filterable-value{
+      color: @gray-color;
+    }
+  }
+  &-disabled &-single-search-input {
+    color: @disabled-color !important;
+  }
+}
+
+.@{select-prefix}-group {
+  outline: none;
+  user-select: none;
+  position: relative;
+  font-size: @font-size-mini;
+  background-color: @white-color;
+  padding: 5px 0px;
+  &-container {
+    .@{select-prefix}-list {
+      max-height: 300px;
+      overflow-y: auto;
+    }
+  }
+  &&-has-label {
+    .@{select-item-prefix} {
+      padding: 8px 20px;
+    }
+  }
+  .@{select-item-prefix} {
+    .li-hover();
+    .text-ellipsis;
+    padding: 8px 10px;
+    position: relative;
+
+    &-disabled {
+      color: @gray-color;
+      cursor: not-allowed;
+      &:hover{
+        background: none;
+      }
+    }
+    &-label {
+      color: @gray-color;
+      font-size: 12px;
+      padding: 8px 10px;
+    }
+  }
+  .@{select-prefix}-search-input {
+    width: 98%;
+    margin: 3px 1%;
+  }
+  &.@{select-prefix}-single {
+    .@{select-item-prefix} {
+      
+      &.@{select-item-prefix}-picked {
+        color: inherit;
+        background-color: @hover-background-color;
+      }
+      &.@{select-item-prefix}-selected {
+        // color: @white-color;
+        background-color: @highlight-background-color;
+      }
+    }
+  }
+  &.@{select-prefix}-multiple {
+    .@{select-item-prefix} {
+      padding-right: 40px;
+      .@{select-check-prefix} {
+        display: none;
+        position: absolute;
+        right: 10px;
+        font-weight: bold;
+      }
+      &-selected {
+        color: @primary-color;
+        background-color: transparent;
+        .li-hover();
+        .@{select-check-prefix} {
+          display: inline-block;
+        }
+      }
+      &.@{select-item-prefix}-picked {
+        background-color: @hover-background-color;
+      }
+    }
+  }
+  .h-select-ul-empty {
+    color: @gray-color;
+    line-height: 24px;
+    padding: 0 10px;
+  }
+}

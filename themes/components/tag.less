@@ -1,0 +1,58 @@
+@tag-prefix: ~"@{prefix}tag";
+
+.@{tag-prefix} {
+  &, &-circle{
+    display: inline-block;
+    padding: 4px 10px;
+    border: @border;
+    line-height: 1;
+    border-radius: @border-radius;
+    background: @white-color;
+    font-size: @font-size-mini;
+    vertical-align: middle;
+    cursor: default;
+    margin-right: 5px;
+  }
+  &-circle {
+    padding: 4px 4px;
+    border-radius: 50%;
+  }
+  &-primary{
+    .h-tag-color(@primary-color);
+  }
+  &-red{
+    .h-tag-color(@red-color);
+  }
+  &-blue{
+    .h-tag-color(@blue-color);
+  }
+  &-yellow{
+    .h-tag-color(@yellow-color);
+  }
+  &-green{
+    .h-tag-color(@green-color);
+  }
+  &-gray{
+    .h-tag-color(@gray-color);
+  }
+
+
+  &-bg-primary{
+    .h-tag-bg-color(@primary-color);
+  }
+  &-bg-red{
+    .h-tag-bg-color(@red-color);
+  }
+  &-bg-blue{
+    .h-tag-bg-color(@blue-color);
+  }
+  &-bg-yellow{
+    .h-tag-bg-color(@yellow-color);
+  }
+  &-bg-green{
+    .h-tag-bg-color(@green-color);
+  }
+  &-bg-gray{
+    .h-tag-bg-color(@gray-color);
+  }
+}

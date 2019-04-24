@@ -1,0 +1,55 @@
+@transfer-prefix: ~"@{prefix}transfer";
+@transfer-header-height: 32px;
+@transfer-item-height: 32px;
+
+.@{transfer-prefix} {
+  display: flex;
+  flex-direction: row;
+  width: 480px;
+  .@{transfer-prefix}-source, .@{transfer-prefix}-target {
+    flex: 1;
+    border: 1px solid #EEE;
+    .@{transfer-prefix}-header {
+      height: @transfer-item-height;
+      line-height: @transfer-item-height;
+      background: #f9f9f9;
+      text-align: center;
+      border-bottom: 1px solid #EEE;
+    }
+    .@{transfer-prefix}-filter {
+      input {
+        width: 100%;
+        border-radius: 0;
+        border-width: 0 0 1px 0;
+        height: 28px;
+        outline: none;
+        border-color: #EEE;
+        box-shadow: none;
+      }
+    }
+    .@{transfer-prefix}-list {
+      max-height: 240px;
+      overflow-y: auto;
+      padding: 4px 0;
+      .@{transfer-prefix}-item {
+        padding-left: 8px;
+        height: @transfer-item-height;
+        line-height: @transfer-item-height;
+        cursor: pointer;
+        .h-checkbox, .h-checkbox label {
+          display: block;
+        }
+        &.text-center {
+          padding-left: 0;
+        }
+        &:hover {
+          background: #f9f9f9;
+        }
+      }
+    }
+  }
+  &-switch {
+    flex-basis: 120px;
+    text-align: center;
+  }
+}
