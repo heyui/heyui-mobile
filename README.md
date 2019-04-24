@@ -63,7 +63,7 @@ hey dev
 
 感兴趣的朋友请添加微信号：heyui-robot
 
-We will pull people into the group regularly.
+我们将定期拉人入群.
 
 ## LICENSE
 
