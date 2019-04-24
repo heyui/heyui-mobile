@@ -4,8 +4,8 @@
 
 # HeyUI Mobile
 
-[![npm package](https://img.shields.io/npm/v/heyui-mobile.svg?style=flat-square)](https://www.npmjs.org/package/heyui)
-![JS gzip size](http://img.badgesize.io/https://unpkg.com/heyui-mobile/dist/heyui-mobile.js?style=flat-square&compression=gzip&label=gzip%20size:%20JS)
+[![npm package](https://img.shields.io/npm/v/heyui-mobile.svg?style=flat-square)](https://www.npmjs.org/package/heyui-mobile)
+![JS gzip size](http://img.badgesize.io/https://unpkg.com/heyui-mobile/dist/index.js?style=flat-square&compression=gzip&label=gzip%20size:%20JS)
 ![CSS gzip size](http://img.badgesize.io/https://unpkg.com/heyui-mobile/themes/index.css?style=flat-square&compression=gzip&label=gzip%20size:%20CSS)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 
